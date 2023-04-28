@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Login Flow', () => {
     test.only('Should be able to login', async ({ request, baseURL }) => {
-        const login = await request.post('$baseURL/api/v2/admin/authentication-token', {
+        const login = await request.post('/baseURL/api/v2/admin/authentication-token', {
             data: {
                 "email": "api@example.com",
                 "password": "sylius-api"
@@ -19,7 +19,7 @@ test.describe('Login Flow', () => {
 
     });
     test('Should not be able to login', async ({ request, baseURL }) => {
-        const login = await request.post('$baseURL/api/v2/admin/authentication-token', {
+        const login = await request.post('/baseURL/api/v2/admin/authentication-token', {
             data: {
                 "email": "wrong-email@example.com",
                 "password": "wrong-password"
