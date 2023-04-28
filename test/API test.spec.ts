@@ -18,8 +18,8 @@ test.describe('Login Flow', () => {
         expect(loginResponse).toHaveProperty('token');
 
     });
-    test('Should not be able to login', async ({ request }) => {
-        const login = await request.post('https://demo.sylius.com/api/v2/admin/authentication-token', {
+    test('Should not be able to login', async ({ request, baseURL }) => {
+        const login = await request.post('baseURL/api/v2/admin/authentication-token', {
             data: {
                 "email": "wrong-email@example.com",
                 "password": "wrong-password"
