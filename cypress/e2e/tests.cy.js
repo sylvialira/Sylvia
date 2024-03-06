@@ -26,6 +26,7 @@ describe('Cypress Tests', () => {
 
     })
 
+    
   //    it('passes', () => {
   //    cy.visit('https://demo.sylius.com/en_US/')
   //  })
